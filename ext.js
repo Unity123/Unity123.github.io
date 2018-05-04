@@ -47,6 +47,13 @@
       }, timeout); 
     }
     
+    ext.on_alarm = function() {
+      if (timer_done === true) {
+        timer_done = false;
+        return true;
+      }
+      return false;
+    }
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
@@ -56,6 +63,7 @@
           [' ', 'execute js %s', 'eval_js', "console.log('hello world')"],
           ['r', 'execute js and return %s', 'eval_with_return', "prompt('whats your name')"],
           [' ', 'set timer %n millisecs', 'set_alarm', '0'],
+          ['h', 'on timer', 'on_alarm'],
         ]
     };
 
