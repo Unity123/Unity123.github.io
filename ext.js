@@ -35,7 +35,7 @@
       eval(js);
     }
     
-    ext.eval_js_with_return = function(js) {
+    ext.eval_with_return = function(js) {
       var result = eval(js);
       return result;
     }
@@ -47,7 +47,7 @@
           ['R', 'get external data with address %s and type %s', 'get_external_data', '', ''],
           ['b', 'is external data ready', 'is_data_ready'],
           [' ', 'execute js %s', 'eval_js', "console.log('hello world')"],
-          ['r', 'execute js and return %s', 'eval_js_with_return', "prompt('whats your name')"],
+          ['r', 'execute js and return %s', 'eval_with_return', "prompt('whats your name')"],
         ]
     };
 
