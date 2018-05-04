@@ -25,6 +25,7 @@
     
     ext.is_data_ready = function() {
       if (done_with_request === true) {
+        done_with_request = false;
         return true;
       }
       return false;
