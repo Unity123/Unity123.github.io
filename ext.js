@@ -55,7 +55,7 @@
           ['b', 'is external data ready', 'is_data_ready'],
           [' ', 'execute js %s', 'eval_js', "console.log('hello world')"],
           ['r', 'execute js and return %s', 'eval_with_return', "prompt('whats your name')"],
-          [' ', 'set timer %n millisecs', 'set_alarm', 0],
+          [' ', 'set timer %n millisecs', 'set_alarm', '0'],
         ]
     };
 
