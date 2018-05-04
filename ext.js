@@ -26,7 +26,7 @@
     var descriptor = {
         blocks: [
           ['h', 'when external data recieved', 'on_external_data'],
-          ['R', 'get external data with address %s and type %s', 'get_external_data', '', '']
+          ['R', 'get external data with address %s and type %s', 'get_external_data', '', ''],
         ]
     };
 
