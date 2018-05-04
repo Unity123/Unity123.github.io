@@ -30,12 +30,18 @@
       }
       return false;
     }
+    
+    ext.eval_js = function(js) {
+      eval(js);
+    }
+    
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
           ['h', 'when external data recieved', 'on_external_data'],
           ['R', 'get external data with address %s and type %s', 'get_external_data', '', ''],
           ['b', 'is external data ready', 'is_data_ready'],
+          [' ', 'execute js %s', 'eval_js', "console.log('hello world')"]
         ]
     };
 
