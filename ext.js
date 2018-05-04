@@ -2,6 +2,7 @@
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
     var done_with_request = false;
+    var timer_done = false;
 
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
@@ -40,6 +41,12 @@
       return result;
     }
     
+    ext.set_alarm = function(timeout) {
+      setTimeout(function() {
+          timer_done = true;
+      }, timeout); 
+    }
+    
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
@@ -48,6 +55,7 @@
           ['b', 'is external data ready', 'is_data_ready'],
           [' ', 'execute js %s', 'eval_js', "console.log('hello world')"],
           ['r', 'execute js and return %s', 'eval_with_return', "prompt('whats your name')"],
+          [' ', 'set timer %n millisecs', 'set_alarm', 0],
         ]
     };
 
